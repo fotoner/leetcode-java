@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'moe.fotone'
+version = '1.0-SNAPSHOT'
+description = 'leetcode-java'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
